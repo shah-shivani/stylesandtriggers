@@ -1,0 +1,28 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourceDictionary1"
+         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    <ComboBox ItemsSource="{Binding Source={StaticResource combo1}}" Height="20" Margin="12,12,66,0" VerticalAlignment="Top">
+    </ComboBox>
+    <Button Margin="12,51,0,0" Height="40" Width="200" Name="button1"  Template="{StaticResource buttontemplate}" HorizontalAlignment="Left" VerticalAlignment="Top">Click Me!</Button>
+    <Button Margin="227,51,51,0" Name="button2"  Style="{StaticResource buttontype}" Height="23" VerticalAlignment="Top">Click Me!</Button>
+    <TabControl Height="295" Margin="12,145,30,22" Name="tabControl1" Width="436" Background="NavajoWhite">
+      <TabItem Header="About Me" Name="tabItem1" Style="{StaticResource tabitem}">
+        <Grid>
+          <TextBlock TextWrapping="Wrap">Shivani is working as an Associate Software Engineer in Advanced Business and Healthcare solutions</TextBlock>
+        </Grid>
+      </TabItem>
+      <TabItem Header="Contact Me" Name="tabItem2"  Style="{StaticResource tabitem}">
+        <Grid>
+          <TextBlock TextWrapping="Wrap">I can be reached at shivani.shah@oneadvanced.com</TextBlock>
+        </Grid>
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>

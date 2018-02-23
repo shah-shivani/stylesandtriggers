@@ -1,0 +1,62 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ResourceDictionary1">
+  <ControlTemplate x:Key="buttontemplate" TargetType="{x:Type Button}">
+    <Grid>
+      <Ellipse x:Name="OUTERCIRCLE" RenderTransformOrigin=".5,.5">
+        <Ellipse.Fill>
+          <LinearGradientBrush>
+            <GradientStop Color="Aqua" Offset="0.1"></GradientStop>
+            <GradientStop Color="Chocolate" Offset="0.5"></GradientStop>
+          </LinearGradientBrush>
+        </Ellipse.Fill>
+      </Ellipse>
+      <Ellipse x:Name="INNERCIRCLE" RenderTransformOrigin="1,1">
+        <Ellipse.Fill>
+          <LinearGradientBrush>
+            <GradientStop Color="Aqua" Offset="0.1"></GradientStop>
+            <GradientStop Color="Chocolate" Offset="0.5"></GradientStop>
+          </LinearGradientBrush>
+        </Ellipse.Fill>
+        <Ellipse.RenderTransform>
+          <ScaleTransform ScaleX=".8" ScaleY=".8"></ScaleTransform>
+        </Ellipse.RenderTransform>
+      </Ellipse>
+    </Grid>
+    <ControlTemplate.Triggers>
+      <Trigger Property="IsPressed" Value="True">
+        <Setter TargetName="OUTERCIRCLE" Property="Fill" Value="Orange"></Setter>
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="True">
+        <Setter TargetName="INNERCIRCLE" Property="Fill" Value="Red"></Setter>
+        <Setter Property="RenderTransform">
+          <Setter.Value>
+            <ScaleTransform ScaleX="5" ScaleY="5"></ScaleTransform>
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+  <Style TargetType="{x:Type Button}" x:Key="buttontype">
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="Background" Value="Green" />
+    <Setter Property="FontSize" Value="14" />
+  </Style>
+  <CollectionViewSource x:Key="combo1">
+    <CollectionViewSource.Source>
+      <col:ArrayList>
+        <ListBoxItem>Shivani Shah</ListBoxItem>
+        <ListBoxItem>Krutika Khatavkar</ListBoxItem>
+        <ListBoxItem>Radhika Nighoskar</ListBoxItem>
+        <ListBoxItem>Heena Prajapati</ListBoxItem>
+      </col:ArrayList>
+    </CollectionViewSource.Source>
+  </CollectionViewSource>
+  <Style TargetType="{x:Type TabItem}" x:Key="tabitem">
+    <Setter Property="BorderBrush" Value="Blue" />
+    <Setter Property="Background" Value="LightPink" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Foreground" Value="IndianRed" />
+  </Style>
+</ResourceDictionary>
