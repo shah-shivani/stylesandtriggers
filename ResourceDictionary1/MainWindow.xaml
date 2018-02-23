@@ -15,7 +15,7 @@
     <TabControl Height="295" Margin="12,145,30,22" Name="tabControl1" Width="436" Background="NavajoWhite">
       <TabItem Header="About Me" Name="tabItem1" Style="{StaticResource tabitem}">
         <Grid>
-          <TextBlock TextWrapping="Wrap">Shivani is working as an Associate Software Engineer in Advanced Business and Healthcare solutions</TextBlock>
+          <TextBlock TextWrapping="Wrap">Shivani Shah  is working as an Associate Software Engineer in Advanced Business and Healthcare solutions</TextBlock>
         </Grid>
       </TabItem>
       <TabItem Header="Contact Me" Name="tabItem2"  Style="{StaticResource tabitem}">
